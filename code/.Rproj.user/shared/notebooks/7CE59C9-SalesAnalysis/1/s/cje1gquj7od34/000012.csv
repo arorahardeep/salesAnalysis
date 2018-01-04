@@ -1,0 +1,6 @@
+"0","ggplot(historicSales, aes(x =  PriceReg, fill = factor(SoldFlag))) +"
+"0","  geom_density(alpha = 0.5) + xlim(c(0,1000)) +xlab(""Price"") +"
+"0","  ylab(""density"") + ggtitle(""Price density"") + xlim(c(0,450))"
+"2","Scale for 'x' is already present. Adding another scale for 'x', which
+will replace the existing scale.
+"

@@ -1,0 +1,4 @@
+"0","ggplot(historicSales, aes(x = factor(SoldFlag), y = ItemCount, "
+"0","                       colour = factor(SoldFlag))) + geom_boxplot() +"
+"0","   xlab(""Sales Flag"") + ylab(""Item Count"")+ ylim(0,400) + "
+"0","  ggtitle(""Item Count Boxplot"")"

@@ -1,0 +1,21 @@
+{
+    "collab_server" : "",
+    "contents" : "library(data.table)\nlibrary(corrplot)\nlibrary(dplyr)\n\ndf <- fread(\"../data/SalesKaggle3.csv\")\n\nhistoricSales <- df[df$File_Type==\"Historical\",]\nactiveInv <- df[df$File_Type==\"Active\",]\n\n### This is scratch pad file to play with data.\n\n### Look at sales data first\nsummary(historicSales)\n\nlength(unique(historicSales$SKU_number))\nlength(unique(activeInv$SKU_number))\n\nsetdiff(activeInv$SKU_number,historicSales$SKU_number)\ninvSalesRecord <- activeInv[activeInv$SKU_number %in% historicSales$SKU_number,]\n\n#historicSales$StrByYear <- historicSales$StrengthFactor / historicSales$ReleaseYear\nhistoricSales[, `:=`(mic=mean(ItemCount)), by=ReleaseYear]\n\ncols = c(\"File_Type\",\"MarketingType\")\nhead(scale(historicSales[,!cols,with=FALSE]))\n\nM <- cor(scale(historicSales[,!cols,with=FALSE]))\n\ncorrplot(M, method=\"number\")\n\n\nx <- df[, `:=`(CNT=.N), by=SKU_number]\n",
+    "created" : 1512660399107.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "4126220588",
+    "id" : "8DB3D723",
+    "lastKnownWriteTime" : 1512833832,
+    "last_content_update" : 1512833832975,
+    "path" : "~/Documents/DataScience/Kaggle/BRIGHTSTAR/code/explore1.R",
+    "project_path" : "explore1.R",
+    "properties" : {
+        "tempName" : "Untitled1"
+    },
+    "relative_order" : 3,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_source"
+}

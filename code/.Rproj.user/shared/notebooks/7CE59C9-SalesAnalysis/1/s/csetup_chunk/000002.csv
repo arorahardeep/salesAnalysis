@@ -1,0 +1,37 @@
+"0","knitr::opts_chunk$set(echo = TRUE)"
+"0","library(data.table)"
+"2","data.table 1.10.4
+"
+"2","  The fastest way to learn (by data.table authors): https://www.datacamp.com/courses/data-analysis-the-data-table-way
+"
+"2","  Documentation: ?data.table, example(data.table) and browseVignettes(""data.table"")
+"
+"2","  Release notes, videos and slides: http://r-datatable.com
+"
+"0","library(corrplot)"
+"2","package ‘corrplot’ was built under R version 3.4.2"
+"2","corrplot 0.84 loaded
+"
+"0","library(xgboost)"
+"0","library(caret)"
+"2","Loading required package: lattice
+"
+"2","Loading required package: ggplot2
+"
+"0","library(DMwR)"
+"2","Loading required package: grid
+"
+"0","library(pROC)"
+"2","Type 'citation(""pROC"")' for a citation.
+"
+"2","
+Attaching package: ‘pROC’
+
+"
+"2","The following objects are masked from ‘package:stats’:
+
+    cov, smooth, var
+
+"
+"0","library(ggplot2)"
+"0","set.seed(2017)"

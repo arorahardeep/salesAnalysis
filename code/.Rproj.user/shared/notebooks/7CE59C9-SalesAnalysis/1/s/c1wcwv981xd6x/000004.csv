@@ -1,0 +1,2 @@
+"0","# Convert MarketingType to numeric"
+"0","historicSales$MarketingType <- ifelse(historicSales$MarketingType == ""D"",1,2)"

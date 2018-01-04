@@ -1,0 +1,21 @@
+{
+    "collab_server" : "",
+    "contents" : "### This is scratch pad file to play with data.\n\nlibrary(data.table)\n\nsalesDF <- read.csv(\"../data/SalesKaggle3.csv\")\n\n\n### Col 1 - SoldFlag\nsalesDF$SoldFlag <- as.factor(salesDF$SoldFlag)\nsummary(salesDF$SoldFlag) \n# Total rows - 198917\n# 0 - 63000  = 31.6%\n# 1 - 12996  = 06.5%\n# NA- 122921 = 61.8%\n\n# Handle NA's for further analysis\n#salesDF$SoldFlag <- ifelse(is.na(salesDF$SoldFlag),-1,salesDF$SoldFlag)\n\n### Col 2 - SoldCount\nsummary(salesDF$SoldCount)\n# Total rows - 198917\n# NA- 122921 = 61.8%\nsummary(salesDF[salesDF$SoldFlag==0,]$SoldCount)\n# SoldFlag 0 - No data\nsummary(salesDF[salesDF$SoldFlag==1,]$SoldCount)\n# SoldFlag 1 - 1 to 73\nhist(salesDF[salesDF$SoldFlag==1,]$SoldCount)\n# Max SoldCount are small\n\n### Col 3- MarketingType\nsummary(salesDF$MarketingType)\n# D - 97971\n# S - 100946\nsummary(salesDF[salesDF$SoldFlag==0,]$MarketingType)\nsummary(salesDF[salesDF$SoldFlag==1,]$MarketingType)\n\n### Col 4 - ReleaseNumber\nsummary(salesDF$ReleaseNumber)\nsummary(salesDF[salesDF$SoldFlag==0,]$ReleaseNumber)\nsummary(salesDF[salesDF$SoldFlag==1,]$ReleaseNumber)\nhist(salesDF[salesDF$SoldFlag==1,]$ReleaseNumber)\n\n### Col 5 - New_Release_Flag\nsummary(salesDF$New_Release_Flag)\nsummary(salesDF[salesDF$SoldFlag==0,]$New_Release_Flag)\nsummary(salesDF[salesDF$SoldFlag==1,]$New_Release_Flag)\nunique(salesDF[salesDF$SoldFlag==0,]$New_Release_Flag)\nunique(salesDF[salesDF$SoldFlag==1,]$New_Release_Flag)\nhist(salesDF[salesDF$SoldFlag==1,]$New_Release_Flag)\nhist(salesDF[salesDF$SoldFlag==0,]$New_Release_Flag)\n\n### Col 6 - StrengthFactor\nsummary(salesDF$StrengthFactor)\nsummary(salesDF[salesDF$SoldFlag==0,]$StrengthFactor)\nboxplot(salesDF[salesDF$SoldFlag==0,]$StrengthFactor)\nsummary(salesDF[salesDF$SoldFlag==1,]$StrengthFactor)\nboxplot(salesDF[salesDF$SoldFlag==1,]$StrengthFactor)\n## Lot of outliers\n\n### Col 7 - \nsummary(salesDF[salesDF$File_Type==\"Active\",]$SoldFlag)\n",
+    "created" : 1512655827683.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "1418852943",
+    "id" : "BC854C02",
+    "lastKnownWriteTime" : 1512833839,
+    "last_content_update" : 1512833839032,
+    "path" : "~/Documents/DataScience/Kaggle/BRIGHTSTAR/code/explore.R",
+    "project_path" : "explore.R",
+    "properties" : {
+        "tempName" : "Untitled1"
+    },
+    "relative_order" : 1,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_source"
+}

@@ -1,0 +1,2 @@
+"0","mat <- xgb.importance (feature_names = colnames(new_tr),model = xgb.sales)"
+"0","xgb.plot.importance (importance_matrix = mat) "

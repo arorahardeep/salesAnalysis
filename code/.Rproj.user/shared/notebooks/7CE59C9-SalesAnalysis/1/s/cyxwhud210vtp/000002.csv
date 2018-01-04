@@ -1,0 +1,5 @@
+"0","xgbpred <- predict (xgb.sales,dtest)"
+"0","test$pred <- xgbpred"
+"0","ggplot(test, aes(x=pred, colour =factor(lbl_test.sales$V1), "
+"0","                 fill = factor(lbl_test.sales$V1), alpha = 0.3)) + "
+"0","  geom_density()"
